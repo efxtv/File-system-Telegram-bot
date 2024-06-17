@@ -1,0 +1,16 @@
+[Unit]
+Description=NGROK Monitoring Service
+After=network.target
+
+[Service]
+ExecStart=/home/path/to/file/ngrok_check.sh
+Restart=always
+User=demo
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+RestartSec=15  # Delay between restart attempts
+StartLimitInterval=300  # Interval in seconds during which start attempts are counted
+StartLimitBurst=60  # Number of restart attempts allowed within StartLimitInterval
+
+[Install]
+WantedBy=multi-user.target
+
