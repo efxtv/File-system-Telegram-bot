@@ -23,5 +23,38 @@ This Python script sets up a Telegram bot that, when executed on a compatible sy
    pip install requests
 ```
 
+## Service commands
+```
+$ pip install -r requirements.txt
+```
+
+```
+$ python3 run.py
+```
+
+```
+$ sudo systemctl daemon-reload
+```
+
+```
+$ sudo systemctl start ngrok-monitor.service
+```
+
+```
+$ sudo service nm status
+```
+
+```
+$ sudo systemctl daemon-reload
+```
+
+```
+$ sudo systemctl restart nm.service
+```
+
+```
+$ sudo journalctl -u nm.service -f
+```
+
 ## How to setup?
 Contact [EFXTv](https://t.me/efxtv) to know more
